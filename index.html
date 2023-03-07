@@ -1,41 +1,95 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
-    <link href="style.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <style>
+        header{
+            height:100vh;
+        }
+        .mask{
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        background-attachment: fixed;
+        }
+        .mainnav{
+        background-color: #101524 !important;
+        }
+        .navbar-dark{
+        box-shadow: none !important;
+        }
+        .navbarchick{
+            width: 100%;
+    position: fixed;
+    z-index: 999;
+    background: transparent;
+        }
+    </style>
 </head>
 <body>
-<!-- <h1 class="zagolovok" title="Предисловие">
-
-        Это мой первый проект
-    </h1>
-    <p style="text-align: center;">
-        <b>Я Далер</b><br>
-        <strong>Я не знаю перевод слова"strong"</strong><br>
-        <mark>Ностальгия по блокнотам</mark><br>
-        <small>Я плохо вижу этот текст</small><br>
-        <del>Я передумал это писать, но снова передумал</del><br>
-        <ins>Имя существительное</ins><br>
-        <sub>Ты унижен</sub><sup>А я повышен</sup>
-        
-    </p>
--->
-<div class="navbar">
-    <ul>
-        <li><a><img src="https://img.icons8.com/ios-filled/48/null/21.png"/></a></li>
-        <li><a href="">Главная</a></li>
-        <li><a href="">Учительский состав</a></li>
-        <li><a href="">Подать заявку</a></li>
-        <li><a href="">О нас</a></li>
-    </ul>
+<div class="navbarchick">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <nav class="navbar bg-body-tertiary">
+                <div class="container">
+                    <a class="navbar-brand" href="#">
+                        <img src="https://img.icons8.com/carbon-copy/100/null/21.png" alt="Bootstrap" width="48" height="48"> 
+                    </a>
+                </div>
+            </nav>
+            <a class="navbar-brand" href="#">School</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link active" aria-current="page" href="#">Главная</a>
+                    <a class="nav-link" href="#">Учительский состав</a>
+                    <a class="nav-link" href="#">События</a>
+                    <a class="nav-link" href="">О нас</a>
+                </div>
+            </div>
+        </div>
+    </nav>
 </div>
+<header>
+    <div class="p-5 text-center bg-image" style="background-image: url('/images/background/bg.png'); height:100%;">
+      <div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">
+        <div class="d-flex justify-content-center align-items-center h-100">
+          <div class="text-white">
+            <h4 class="mb-3">Добро Пожаловать</h4>
+            <h1 class="mb-3">В специализированную <br>Школу №21</h1>
+            <a class="btn btn-outline-light btn-lg" href="/contact" role="button">Стать Учеником</a>
+          </div>
+        </div>
+      </div>
+    </div>
+</header>
 
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.1.0/mdb.min.js"></script>
+<script src="/javascript/admin.js"></script>
+<script>
+  window.onscroll = function () {
+    scrollFunct()
+  }
+  function scrollFunct() {
+    if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40) {
+      document.getElementsByClassName("navbarchick")[0].classList.add("mainnav")
+    } else {
+      document.getElementsByClassName("navbarchick")[0].classList.remove("mainnav");
+    }
+  }
+</script>
 </body>
+
 </html>
